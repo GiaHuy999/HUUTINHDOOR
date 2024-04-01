@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3e0ca;
+}
+
+header {
+    background-color: #da6600;
+    color: #fff;
+    padding: 55px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 80px;
+}
+
+section {
+    margin: 20px auto;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+label,
+input,
+textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-list {
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: space-between; /* Căn các phần tử theo chiều ngang, cách đều nhau */
+    flex-wrap: wrap; /* Cho phép các phần tử chồng lên nhau khi không còn đủ không gian */
+ 
+}
+
+.product-item {
+    flex: 0 0 30%; /* Phần tử sẽ chiếm 30% chiều rộng của container */
+    text-align: center; /* Căn giữa nội dung */
+    margin-bottom: 20px; /* Khoảng cách giữa các phần tử */
+}
+/*Ảnh*/
+.product-item img {
+    width: 75%; 
+    height: auto; 
+    border-radius: 15px; 
+    margin-top: 30px;
+}
+footer {
+    background-color: #da6600;
+    padding: 20px;
+    text-align: center;
+    width: 100%; 
+    position: relative; /* Đảm bảo vị trí của footer không bị ảnh hưởng bởi các phần tử khác */
+    bottom: 0; /* Đặt footer ở dưới cùng của trang */
+    color: #ffffff;
+    font-size: 18px;
+}
+footer h2 {
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 35px;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+
