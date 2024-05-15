@@ -1,62 +1,93 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     background-color: #f3e0ca;
 }
 
-header {
-    background-color: #da6600;
-    color: #fff;
-    padding: 55px 0;
+.header {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử trong header */
+    align-items: center; /* Căn chỉnh các phần tử theo chiều dọc */
+    color: #000000;
+    text-align: center;
+
+    justify-content: space-between; /* Căn các phần tử trong header ra xa nhau */
+}
+h1 {
+    margin: 0; /* Loại bỏ margin mặc định của tiêu đề */
+    flex-grow: 2; /* Phần tử sẽ mở rộng ra để chiếm hết không gian còn lại */
+    text-align: center; /* Căn giữa nội dung của tiêu đề */
+}
+.header-content {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử */
+    align-items: center; /* Căn các phần tử theo chiều dọc */
     text-align: center;
 }
 
-h1 {
-    margin: 0;
-    font-size: 80px;
+.logo, .co-so {
+    display: inline-block; /* Đảm bảo cả hai phần tử nằm trên cùng một hàng */
+    vertical-align: middle; /* Căn chỉnh theo chiều dọc */
 }
 
-section {
-    margin: 20px auto;
-    width: 80%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.logo {
+    height: 120px; 
+    width:auto; /* Độ rộng của hình ảnh */
+    /* Chiều cao tự động điều chỉnh theo tỷ lệ */
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    margin-left: 0.5%;
 }
 
+.co-so {
+    font-size: 300%; /* Kích thước cho phần Cở sở nhôm cao cấp */
+    margin-bottom: 1%;
+    margin-top:1%;
+    color: #ff8121;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Times New Roman', Times, serif;
+}
 h2 {
     color: #333;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Định dạng thanh công cụ */
+.toolbar {
+    background-color: #ff8121; /* Màu nền */
+    padding:1.7%; /* Khoảng cách bên trong thanh công cụ */
+    display: flex;
+    justify-content: center;
 }
 
-li {
-    margin-bottom: 10px;
+.toolbar a {
+    
+    color: white; /* Màu chữ */
+    text-decoration: none; /* Loại bỏ gạch chân */
+    font-size:150%;
 }
 
-form {
-    width: 50%;
-    margin: 0 auto;
+section {/*bg nhỏ*/
+    margin: 3.5% auto;
+    width: 80%;
+    background-color: #ffffff;
+    padding: 5%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-label,
-input,
+
 textarea {
     display: block;
     margin-bottom: 10px;
 }
-
+/*đặt hàng*/
 input[type="submit"] {
     background-color: #333;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 1% 4%;
+    border-radius: 5%;
     cursor: pointer;
 }
 
@@ -64,28 +95,47 @@ input[type="submit"] {
     display: flex; /* Sử dụng Flexbox */
     justify-content: space-between; /* Căn các phần tử theo chiều ngang, cách đều nhau */
     flex-wrap: wrap; /* Cho phép các phần tử chồng lên nhau khi không còn đủ không gian */
- 
+    
 }
-
 .product-item {
+    margin-right: 1%;
     flex: 0 0 30%; /* Phần tử sẽ chiếm 30% chiều rộng của container */
     text-align: center; /* Căn giữa nội dung */
-    margin-bottom: 20px; /* Khoảng cách giữa các phần tử */
+    margin-bottom: 2%; /* Khoảng cách giữa các phần tử */
+    font-size: 130%;
 }
+.view-more-btn {
+    background-color: #525050;
+    color: #fff;
+    border: none;
+    padding: 2% 5%; /* Sử dụng phần trăm (%) cho padding */
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 75%;
+    width: 110px; /* Sử dụng phần trăm (%) cho chiều rộng */
+    height: 35px; /* Sử dụng phần trăm (%) cho chiều cao */
+}
+
 /*Ảnh*/
 .product-item img {
     width: 75%; 
     height: auto; 
-    border-radius: 15px; 
-    margin-top: 30px;
+    border-radius: 5%; 
+    margin-top: 5%;
+    transition: width 0.5s ease-in-out;
+    overflow: hidden;
 }
+.product-item:hover img {
+    width: 85%; /* Tăng kích thước hình ảnh khi hover */
+}
+
+
 footer {
-    background-color: #da6600;
-    padding: 20px;
+    background-color: #ff8121;
+    padding: 2.5%;
     text-align: center;
-    width: 100%; 
     position: relative; /* Đảm bảo vị trí của footer không bị ảnh hưởng bởi các phần tử khác */
-    bottom: 0; /* Đặt footer ở dưới cùng của trang */
+    bottom: 0; 
     color: #ffffff;
     font-size: 18px;
 }
@@ -99,4 +149,57 @@ footer p {
     margin: 4px 0;
 }
 
+/* Dropdown menu */
 
+
+.toolbar .dropdown {
+    position: relative; 
+    margin: 0 20px; 
+   
+}
+
+/* Liên kết trong thanh điều hướng */
+.toolbar a {
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 15px; 
+}
+
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0; 
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    overflow-y: auto;
+    max-height: none;
+    height: auto;
+
+    border-radius: 10px;
+}
+
+/* Hiển thị dropdown content khi hover vào dropdown */
+.toolbar .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1; 
+}
+
+/* Định dạng các tùy chọn trong dropdown content */
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
