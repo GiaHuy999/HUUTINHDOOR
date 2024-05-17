@@ -1,8 +1,12 @@
 body {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/huutinhdoor.appspot.com/o/stylish-hexagonal-line-pattern-background_1017-19742.avif?alt=media&token=427306b4-0a52-49f2-a835-a9d9683f9c57');
+    background-size: 25%;
+    background-position: center;
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     background-color: #f3e0ca;
+
 }
 
 .header {
@@ -70,7 +74,7 @@ h2 {
 section {/*bg nhỏ*/
     margin: 3.5% auto;
     width: 80%;
-    background-color: #ffffff;
+    background-color:#ffc79c;
     padding: 5%;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
